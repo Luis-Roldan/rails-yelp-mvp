@@ -1,0 +1,11 @@
+<h1>Restaurants in Peru</h1>
+<ol>
+  <% @restaurants.each do |restaurant| %>
+    <li>
+      <%= restaurant.name %>
+      <%= link_to "More info", restaurant_path(restaurant), class: "btn btn-primary m-3" %>
+    </li>
+  <% end %>
+</ol>
+
+      <%= link_to "Add new Restaurant", new_restaurant_path, class: "btn btn-primary m-3" %>
